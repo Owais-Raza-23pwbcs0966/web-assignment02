@@ -6,6 +6,10 @@ const auth = require('../middleware/auth');
 
 const router = express.Router();
 
+router.post('/', async (req, res) => {
+    res.status(201).json("the server is running");
+})
+
 // POST /api/signup
 router.post('/signup', async (req, res) => {
     try {
